@@ -195,7 +195,3 @@ class MCTOptics(Device):
     # Camera Lens Positions, Offsets, & Movement
     camera_0 = Cpt(MCTOpticsCameraControl, "Camera0")
     camera_1 = Cpt(MCTOpticsCameraControl, "Camera1")
-
-
-# Example initialization
-optics = MCTOptics("2bm:MCTOptics:", name="optics")

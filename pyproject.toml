@@ -7,49 +7,28 @@ copyright = "2014-2024, APS"
 
 [project]
 name = "tomo_instrument"
-dynamic = ["version"]
-description = "Model of a Bluesky Data Acquisition Instrument in console, notebook, & queueserver."
+version = "1.0.0"
+description = ""
 authors = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
     { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
     { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
+    { name = "Francesco de Carlo", email = "decarlof@anl.gov"},
 ]
 maintainers = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
     { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
     { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
+    { name = "Francesco de Carlo", email = "decarlof@anl.gov"},
 ]
 readme = "README.md"
 requires-python = ">=3.11"
-keywords = ['bluesky', 'queueserver']
-license = { file = "src/instrument/LICENSE" }
-classifiers = [
-    "Development Status :: 6 - Mature",
-    "Environment :: Console",
-    "Intended Audience :: Developers",
-    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
-    "License :: Freely Distributable",
-    "License :: Public Domain",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Topic :: Utilities",
-]
+keywords = []
+license = { file = "LICENSE" }
+classifiers = []
 dependencies = [
-    "apstools",
-    "bluesky-queueserver",
-    "bluesky-queueserver-api",
-    "bluesky",
-    "bluesky-widgets",
-    "databroker ==1.2.5",
-    "ipython",
-    "jupyterlab",
-    "ophyd-registry",
-    "ophyd",
-    "pyRestTable",
-    "pysumreg",
-    "qtpy",
-    "PyQt5>5.15",
-]
+    "apsbits",
+    ]
 
 [project.optional-dependencies]
 dev = ["build", "isort", "mypy", "pre-commit", "pytest", "ruff"]
@@ -69,14 +48,10 @@ doc = [
     "sphinx",
 ]
 
-all = ["instrument[dev,doc]"]
-
 [project.urls]
 "Homepage" = "https://BCDA-APS.github.io/tomo-bits/"
 "Bug Tracker" = "https://github.com/BCDA-APS/tomo-bits/issues"
 
-# [project.scripts]
-# instrument = "instrument.app:main"
 
 [tool.black]
 line-length = 115
@@ -219,10 +194,7 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.setuptools]
-package-dir = {"tomo_instrument" = "src/instrument"}
+package-dir = {"tomo_instrument" = "src/tomo_instrument"}
 
 [tool.setuptools.package-data]
 "*" = ["*.yml"]
-
-[tool.setuptools_scm]
-write_to = "src/instrument/_version.py"
