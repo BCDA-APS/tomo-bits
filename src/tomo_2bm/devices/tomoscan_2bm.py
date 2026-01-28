@@ -26,12 +26,10 @@ class TomoScan2BMDevice(TomoScanHelicalDevice):
 
     """
 
-    # mctOptics camera selection
-    camera_select = Cpt(EpicsSignal, 'CameraSelect', kind='config')  # This will be dynamically set
     testing = Cpt(EpicsSignal, 'Testing', kind='config')
 
     # Front-end shutter (different from fast shutter)
-    shutter_status = Cpt(EpicsSignalRO, 'ShutterStatus', kind='normal')
+    # shutter_status = Cpt(EpicsSignalRO, 'ShutterStatus', kind='normal')
 
     # Data transfer settings
     copy_to_analysis_dir = Cpt(EpicsSignal, 'CopyToAnalysisDir', kind='config')

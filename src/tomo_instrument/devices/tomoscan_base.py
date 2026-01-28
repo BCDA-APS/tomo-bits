@@ -79,10 +79,10 @@ class TomoScanDevice(Device):
     sample_name = Cpt(EpicsSignal, 'SampleName', string=True, kind='config')
 
     # Shutter PVs (may be None for some beamlines)
-    close_shutter_pv = Cpt(EpicsSignal, 'CloseShutter', kind='config')
-    close_shutter_value = Cpt(EpicsSignal, 'CloseShutterValue', kind='config')
-    open_shutter_pv = Cpt(EpicsSignal, 'OpenShutter', kind='config')
-    open_shutter_value = Cpt(EpicsSignal, 'OpenShutterValue', kind='config')
+    # close_shutter_pv = Cpt(EpicsSignal, 'CloseShutter', kind='config')
+    # close_shutter_value = Cpt(EpicsSignal, 'CloseShutterValue', kind='config')
+    # open_shutter_pv = Cpt(EpicsSignal, 'OpenShutter', kind='config')
+    # open_shutter_value = Cpt(EpicsSignal, 'OpenShutterValue', kind='config')
 
     # PV prefixes - these store the prefixes for other IOCs
     camera_pv_prefix = Cpt(EpicsSignal, 'CameraPVPrefix', string=True, kind='config')

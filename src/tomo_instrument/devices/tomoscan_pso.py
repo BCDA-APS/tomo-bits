@@ -40,6 +40,3 @@ class TomoScanPSODevice(TomoScanDevice):
     # PSO command interface
     pso_command_out = Cpt(EpicsSignal, 'PSOCommand.BOUT', string=True, kind='omitted')
     pso_command_in = Cpt(EpicsSignalRO, 'PSOCommand.BINP', string=True, kind='omitted')
-
-    # Readout margin
-    readout_margin = Cpt(EpicsSignal, 'ReadoutMargin', kind='config')
