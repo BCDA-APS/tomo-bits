@@ -4,7 +4,6 @@ This module provides the TomoScanHelicalDevice class that extends
 PSO fly-scan with helical vertical motion capability.
 """
 
-
 from ophyd import Component as Cpt
 from ophyd import EpicsSignal
 
@@ -23,5 +22,5 @@ class TomoScanHelicalDevice(TomoScanPSODevice):
     """
 
     # Helical scan configuration
-    scan_type = Cpt(EpicsSignal, 'ScanType', string=True, kind='config')
-    pixels_y_per_360deg = Cpt(EpicsSignal, 'PixelsYPer360Deg', kind='config')
+    scan_type = Cpt(EpicsSignal, "ScanType", string=True, kind="config")
+    pixels_y_per_360deg = Cpt(EpicsSignal, "PixelsYPer360Deg", kind="config")

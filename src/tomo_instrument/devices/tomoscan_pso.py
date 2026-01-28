@@ -27,16 +27,18 @@ class TomoScanPSODevice(TomoScanDevice):
     """
 
     # PSO-specific configuration
-    pso_model = Cpt(EpicsSignal, 'PSOControllerModel', string=True, kind='config')
-    pso_axis = Cpt(EpicsSignal, 'PSOAxisName', string=True, kind='config')
-    pso_counts_per_rotation = Cpt(EpicsSignal, 'PSOCountsPerRotation', kind='config')
-    pso_encoder_counts_per_step = Cpt(EpicsSignal, 'PSOEncoderCountsPerStep', kind='config')
-    pso_start_taxi = Cpt(EpicsSignal, 'PSOStartTaxi', kind='config')
-    pso_end_taxi = Cpt(EpicsSignal, 'PSOEndTaxi', kind='config')
-    pso_pulse_width = Cpt(EpicsSignal, 'PSOPulseWidth', kind='config')
-    pso_encoder_input = Cpt(EpicsSignal, 'PSOEncoderInput', kind='config')
-    program_pso_flag = Cpt(EpicsSignal, 'ProgramPSO', string=True, kind='config')
+    pso_model = Cpt(EpicsSignal, "PSOControllerModel", string=True, kind="config")
+    pso_axis = Cpt(EpicsSignal, "PSOAxisName", string=True, kind="config")
+    pso_counts_per_rotation = Cpt(EpicsSignal, "PSOCountsPerRotation", kind="config")
+    pso_encoder_counts_per_step = Cpt(
+        EpicsSignal, "PSOEncoderCountsPerStep", kind="config"
+    )
+    pso_start_taxi = Cpt(EpicsSignal, "PSOStartTaxi", kind="config")
+    pso_end_taxi = Cpt(EpicsSignal, "PSOEndTaxi", kind="config")
+    pso_pulse_width = Cpt(EpicsSignal, "PSOPulseWidth", kind="config")
+    pso_encoder_input = Cpt(EpicsSignal, "PSOEncoderInput", kind="config")
+    program_pso_flag = Cpt(EpicsSignal, "ProgramPSO", string=True, kind="config")
 
     # PSO command interface
-    pso_command_out = Cpt(EpicsSignal, 'PSOCommand.BOUT', string=True, kind='omitted')
-    pso_command_in = Cpt(EpicsSignalRO, 'PSOCommand.BINP', string=True, kind='omitted')
+    pso_command_out = Cpt(EpicsSignal, "PSOCommand.BOUT", string=True, kind="omitted")
+    pso_command_in = Cpt(EpicsSignalRO, "PSOCommand.BINP", string=True, kind="omitted")
