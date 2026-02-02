@@ -66,6 +66,7 @@ def tomo_single_scan(oregistry, *, md=None):
         testing_mode = yield from bps.rd(tomoscan.testing)
         if testing_mode:
             print("Testing mode enabled - scan would run here")
+            yield from bps.mv(tomoscan.start_scan, 1)
         else:
             # Trigger the scan by setting StartScan to 1
             # The timeout is set to 360000 seconds (100 hours) to handle long scans

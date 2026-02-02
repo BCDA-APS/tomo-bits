@@ -15,7 +15,7 @@ apsbits.utils.sim_creator.predefined_device:
 
 tomo_2bm.devices.tomoscan_2bm.TomoScan2BMDevice:
 - name: tomoscan
-  labels: ["tomoscan"]
+  labels: ["tomoscan", "baseline"]
   prefix: "2bmb:TomoScan:"
 
 ## THIS ARE EXAMPLES OF OTHER DEVICES THAT YOU CAN USE

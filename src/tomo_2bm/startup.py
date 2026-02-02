@@ -78,8 +78,8 @@ else:
 # Experiment specific logic, device and plan loading. # Create the devices.
 make_devices(clear=False, file="devices.yml", device_manager=instrument)
 
-if host_on_aps_subnet():
-    make_devices(clear=False, file="devices_aps_only.yml", device_manager=instrument)
+# if host_on_aps_subnet():
+#     make_devices(clear=False, file="devices_aps_only.yml", device_manager=instrument)
 
 # Setup baseline stream with connect=False is default
 # Devices with the label 'baseline' will be added to the baseline stream.
