@@ -61,7 +61,8 @@ def tomo_single_scan(oregistry, *, md=None):
 
         # Set scan type to 'Single'
         yield from bps.mv(tomoscan.scan_type, 'Single')
-
+        yield from bps.monitor(tomoscan, name="tomoscan_monitor") # Monitor all tomoscan signals during the scan,
+                                                                  # maybe add a name?
         # Check if in testing mode
         testing_mode = yield from bps.rd(tomoscan.testing)
         if testing_mode:
@@ -75,5 +76,6 @@ def tomo_single_scan(oregistry, *, md=None):
 
         # Reset scan type back to 'Single' (as done in CLI)
         yield from bps.mv(tomoscan.scan_type, 'Single')
+        yield from bps.unmonitor(tomoscan)
 
     yield from inner()
