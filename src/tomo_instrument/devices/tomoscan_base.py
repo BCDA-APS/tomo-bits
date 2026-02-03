@@ -31,6 +31,10 @@ class TomoScanDevice(Device):
         Array of rotation angles for the current/last scan
     """
 
+    # Enable subscription support for monitoring PVs during Bluesky scans
+    # SUB_ACQ_DONE is triggered when 'normal' and 'config' signals change
+    _default_sub = Device.SUB_ACQ_DONE
+
     # Configuration PVs - values saved with scan configuration
     rotation_start = Cpt(EpicsSignal, "RotationStart", kind="config")
     rotation_step = Cpt(EpicsSignal, "RotationStep", kind="config")
