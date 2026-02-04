@@ -48,7 +48,7 @@ instrument, oregistry = init_instrument("guarneri")
 oregistry.clear()
 
 # Setup APS Data Management
-# aps_dm_setup(iconfig.get("DM_SETUP_FILE"))
+aps_dm_setup(iconfig.get("DM_SETUP_FILE"))
 
 # Command-line tools, such as %wa, %ct, ...
 register_bluesky_magics()
@@ -90,8 +90,8 @@ make_devices(clear=False, file="devices.yml", device_manager=instrument)
 # Devices with the label 'baseline' will be added to the baseline stream.
 setup_baseline_stream(sd, oregistry, connect=False)
 
+from .plans.plans_with_dm import tomo_single_scan_dm  # noqa: E402, F401
 from .plans.sim_plans import sim_count_plan  # noqa: E402, F401
 from .plans.sim_plans import sim_print_plan  # noqa: E402, F401
 from .plans.sim_plans import sim_rel_scan_plan  # noqa: E402, F401
 from .plans.tomo_single import tomo_single_scan  # noqa: E402, F401
-# from .plans.plans_with_dm import tomo_single_scan_dm  # noqa: E402, F401
