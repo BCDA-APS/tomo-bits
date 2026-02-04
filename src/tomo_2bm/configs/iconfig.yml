@@ -60,7 +60,7 @@ SPEC_DATA_FILES:
 
 ### APS Data Management
 ### Learn environment variables for Data Management from this file:
-DM_SETUP_FILE: "/home/dm/etc/dm.setup.sh"
+DM_SETUP_FILE: "/home/dm_bm/etc/dm.setup.sh"
 
 # ----------------------------------
 
