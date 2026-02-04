@@ -1,17 +1,22 @@
 # Guarneri-style device YAML configuration
 
 apsbits.utils.sim_creator.predefined_device:
-- {creator: ophyd.sim.motor, name: sim_motor}
-- {creator: ophyd.sim.noisy_det, name: sim_det}
+- { creator: ophyd.sim.motor, name: sim_motor }
+- { creator: ophyd.sim.noisy_det, name: sim_det }
 
-apstools.devices.SimulatedApsPssShutterWithStatus:
-- name: shutter
-  labels: ["shutters"]
+# apstools.devices.SimulatedApsPssShutterWithStatus:
+# - name: shutter
+#   labels: ["shutters"]
 
-tomo_instrument.devices.mct_optics.MCTOptics:
-- name: optics
-  labels: ["optics"]
-  prefix: "2bm:MCTOptics:"
+# tomo_instrument.devices.mct_optics.MCTOptics:
+# - name: optics
+#   labels: ["optics"]
+#   prefix: "2bm:MCTOptics:"
+
+tomo_2bm.devices.tomoscan_2bm.TomoScan2BMDevice:
+- name: tomoscan
+  labels: ["tomoscan", "baseline"]
+  prefix: "2bmb:TomoScan:"
 
 ## THIS ARE EXAMPLES OF OTHER DEVICES THAT YOU CAN USE
 # ophyd.Signal:
@@ -23,7 +28,7 @@ tomo_instrument.devices.mct_optics.MCTOptics:
 # apstools.synApps.Optics2Slit2D_HV:
 # - name: slit1
 #   prefix: ioc:Slit1
-#   labels: ["slits"]
+#   labels: ["slits", "baseline"]
 
 # hkl.SimulatedE4CV:
 # - name: sim4c
